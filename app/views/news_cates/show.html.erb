@@ -1,0 +1,26 @@
+<% title [@news_cate.name, "红宝石信息技术网，专业网站建设专家"].join(' - ') %>
+<% meta_keywords [@news_cate.name, "成都红宝石信息技术网", "网站建设，网站推广，公关软文，电子商务，企业信息化，Ruby on Rails"].join(' - ') %>
+<% meta_description [@news_cate.name, "红宝石信息技术网多年互联网从业经验，团队为企业提供企业策划、网站建设、网络推广、公关软文、电子商务等一站式服务！联系电话：15928661802"].join(' - ') %>
+
+
+<div class="list">
+  <h3 class="titlbg"><%=@news_cate.name %></h3>
+  <ul>
+    <% @news_items.each_with_index do |item, index| %>
+      <li>
+        <h3><span class="title_ico">&nbsp;</span><%=link_to item.title.to_s.truncate(30), news_item_path(item)%></h3>
+          <% unless item.image_path.blank? && item.image_url.blank? %>
+            <div class="summary with_img">
+              <% image_path = item.image_path.blank? ? item.image_url : item.image_path %>
+              <%= image_tag image_path, :class => 'img_left', :height => '100' %>
+          <% else %>
+            <div class="summary">
+          <% end %>
+          <%= item.summary.blank? ? strip_tags(item.body).to_s.gsub(/[ ]+|\s+|\t+|\n+/, '').truncate(200) : strip_tags(item.summary)%>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="tags"><%= will_paginate @news_items, :next_label => '下一页', :prev_label => '上一页' %></div>

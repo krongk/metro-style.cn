@@ -1,0 +1,29 @@
+<div class="box">
+<hr/>
+  <ul class="list1">
+    <% NewsCate.recent(10).each do |item| %>
+      <li><%=link_to item.name, news_cate_path(item), :title => item.name %></li>
+    <% end %>
+<!--     <li><%#=link_to "搜索引擎研究", "/search_items", :title => "搜索引擎研究" %></li> -->
+    <% ProjectCate.all.each do |item| %>
+      <li><%=link_to item.name, project_cate_path(item), :title => item.name %></li>
+    <% end %>
+  </ul>
+</div>
+<br/>
+<% unless is_mobile_agent? %>
+  <div class="box">
+    <h3>Inruby@搜索</h3>
+    <form action="/search" id="login-form">
+      <fieldset>
+        <div class="field"><input type="text" class="text" name="q" id="q" />
+        <input type="submit" value="搜索" class="submit fleft"/></div>
+      </fieldset>
+    </form>
+  </div>
+<% end %>
+
+<br/>
+<!--cnzz tui-->
+<script  type="text/javascript" charset="utf-8"  src="http://tui.cnzz.net/cs.php?id=1000011235"></script>
+<!--cnzz tui-->

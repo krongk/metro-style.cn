@@ -1,0 +1,50 @@
+<% title [@news_item.title, "红宝石信息技术网，专业网站建设专家"].join(',') %>
+<% meta_keywords [ @news_item.title, @news_item.meta_keywords, "红宝石信息技术网，红宝石企业建站, 红宝石互联网开发团队"].join(',') %>
+<% meta_description [ @news_item.title, @news_item.meta_description,"红宝石信息技术网多年互联网从业经验，团队为企业提供企业策划、网站建设、网络推广、公关软文、电子商务等一站式服务！联系电话：15928661802"].join(',') %>
+
+
+<div class="news_main">
+  <div class="titlerb">
+    <h1><%= @news_item.title %></h1>
+  </div>
+  <div class="news_content">
+    <% unless @news_item.tags.blank? %>
+      <div class="tags">分类标签：
+        <% tags = @news_item.tags.split(/\s+/) 
+           tags = tags.select{|t| t !~ /^\d+$/}.map{|t| t.downcase}.uniq
+        %>
+
+        <% tags.each do |tag|%>
+           <%=link_to tag, "/news_cates/#{tag}" %>
+        <% end %>
+      </div>
+    <% else %>
+      <hr/>
+    <% end %>
+    <% unless @news_item.image_path.blank? && @news_item.image_url.blank?%>
+      <% site_image              = %{<div class="news_img"><span class="site_img"><img title="#{@news_item.title}--inruby.com" src="#{@news_item.image_url.blank? ? @news_item.image_path : @news_item.image_url}"/></span></div>} 
+      @news_item.body = @news_item.body.to_s.sub(/(:|：|。|.|;)\n/, "\n#{site_image}\n")
+      %>
+    <% end %>
+    <%# Manually formated news %>
+    <% if !@news_item.body.blank? && @news_item.body =~ /<table |<div /i %>
+      <%= @news_item.body.to_s.gsub(/^<br\/>|<p>/, '').html_safe %>
+    <% else %>
+      <%= simple_format @news_item.body.to_s.gsub(/^<br\/>|<p>/, '') %>
+    <% end %>
+
+    <p><%= render :partial => 'layouts/bshare' %></p>
+
+    <!--相关新闻-->
+    <hr/>
+    <div class="related">
+     <ul>
+       <% NewsItem.recent_related(@news_item.id).each do |item|%>
+         <li><%= link_to item.title, news_item_path(item.id)%></li>
+       <% end %>
+     </ul>
+    </div>
+
+    <%= link_to "想要阅读更多内容？", news_cate_path(@news_item.news_cate), :class=> 'read_more' %>
+  </div>
+</div>

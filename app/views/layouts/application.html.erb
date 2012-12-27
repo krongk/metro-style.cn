@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="zh-cn" />
+  <meta name="robots" content="all" />
+  <meta name="author" content="inruby.com" />
+  <meta name="Copyright" content="Inruby Lcd, All Rights Reserved." />
+  <title><%= yield(:title) %> </title>
+  <meta name="keywords" content="<%= yield(:meta_keywords)%>" />
+  <meta name="description" content="<%= yield(:meta_description)%>" />
+
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    var gridster;
+
+    $(function(){
+      gridster = $(".gridster > ul").gridster({
+        widget_margins: [5, 5],
+        widget_base_dimensions: [140, 140],
+        min_cols: 6
+      }).data('gridster');
+
+    });
+    //gridster.add_widget('<li class="new" data-row="2" data-col="7" data-sizex="1" data-sizey="2">The HTML of the widget...</li>', 2, 1);
+    //gridster.remove_widget( $('.gridster li').eq(3) );
+    //gridster.serialize();
+  </script>
+  <!--[if lt IE 7]>
+    <link href="/assets/ie_style.css" rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head> 
+
+
+<body class="page">
+  <%=render :partial => "layouts/header" %>
+
+  <section class="content">
+    <%=yield %>
+  </section>
+
+  <%=render :partial => "layouts/footer" %>  
+</body>
+</html>

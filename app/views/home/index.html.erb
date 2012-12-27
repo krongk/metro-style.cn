@@ -1,0 +1,24 @@
+<% title "" %>
+<% meta_keywords ""%>
+<% meta_description "" %>
+
+
+<div class="gridster">
+  <ul>
+    <% @pages.each do |page| %>
+      <li data-row="<%=page.data_row %>" data-col="<%=page.data_col %>" data-sizex="<%=page.data_sizex %>" data-sizey="<%=page.data_sizey %>">
+          <div class="live-tile <%=page.theme %>">
+            <span class="tile-title"><%= page.tile_title %></span>
+            <% if page.icon_url.blank? %>
+              <div> <%=link_to page.title, page_path(page) %></div>
+            <% else %>
+              <div class="icon">
+                  <span class="icon-home"><%=image_tag page.icon_url %></span>
+                  <div><%=link_to page.title, page_path(page) %></div>
+              </div>
+            <% end %>
+          </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

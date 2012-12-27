@@ -1,0 +1,17 @@
+<% title ["红宝石信息技术网，您身边的企业信息化解决专家"].join(' - ') %>
+<% meta_keywords ["成都红宝石信息技术网", "网站建设，网站推广，公关软文，电子商务，企业信息化，Ruby on Rails"].join(' - ') %>
+<% meta_description ["红宝石信息技术网，多年互联网从业经验，团队为企业提供企业策划、网站建设、网络推广、公关软文、电子商务等一站式服务！联系电话：15928661802"].join(' - ') %>
+
+
+<div class="list">
+  <ul>
+    <% @news_items.each_with_index do |item, index| %>
+      <li>
+        <h3 class="titbg" ><span class="title_ico">&nbsp;</span><%=link_to item.title.to_s.truncate(30), news_item_path(item)%></h3>
+        <p class="summary"><%=  item.summary || strip_tags(item.body).to_s.gsub(/[ ]+|\s+|\t+|\n+/, '').truncate(200)%>
+        <span><%=link_to '阅读详情>>>', news_item_path(item), :target => "_blank"%></span> </p>
+      </li>
+    <% end %>
+  </ul>
+  <div class="tags"><%= will_paginate @news_items, :next_label => "下一页", :prev_label => "上一页" %></div>
+</div>

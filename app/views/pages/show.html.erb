@@ -1,0 +1,36 @@
+<% title @page.title %>
+<% meta_keywords @page.meta_keywords %>
+<% meta_description @page.meta_description %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="<%=@page.data_sizex %>" data-sizey="<%=@page.data_sizey %>">
+      <div class="live-tile <%=@page.theme %>">
+        <span class="tile-title"><%= @page.tile_title %></span>
+        <% if @page.icon_url.blank? %>
+          <div> <%=link_to @page.title, page_path(@page) %></div>
+        <% else %>
+          <div class="icon">
+              <span class="icon-home"><%=image_tag @page.icon_url %></span>
+              <div><%=link_to @page.title, page_path(@page) %></div>
+          </div>
+        <% end %>
+      </div>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="<%= 6 - @page.data_sizex %>" data-sizey="<%= 4 - @page.data_sizey %>">
+      <div class="live-tile white %>">
+        <article class="article">
+          <%= @page.body.html_safe %>
+          <br/>
+          <%= render :partial => 'layouts/bshare' %>
+        </article>
+      </div>
+    </li>
+
+  </ul>
+</div>
+
+
+
+
