@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Style/Interacao.css" rel="stylesheet" type="text/css" />
+    <link href="Style/jq-metro.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="Script/jquery.metro-btn.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#metroaqui").AddMetroSimpleButton('bt3', 'metro-vermelho', 'Style/Imagem/carta.png', 'Vermelho', 'alert("Vermelho");');
+            $("#metroaqui").AddMetroSingleLabeledButton('bt6', 'metro-roxo', 'Style/Imagem/carta.png', '30', 'alert("Vermelho");');
+			$("#metroaqui").AddMetroDoubleButton('bt4', 'metro-azul', 'Style/Imagem/carta.png', 'Azul', 'alert("Azul");');
+
+			$("#metroaqui_novo").AddMetroDoubleWithTrailer('bt6', 'metro-azul', 'Style/Imagem/admin.png', 'Button with Status Text', 'alert("Text");', 'metro-info');
+			$("#metroaqui_novo").AddMetroDoubleWithTrailerWithBG('bt6', 'Style/Imagem/fundo_metro.png', 'Button with Status Text', 'alert("Text");', 'metro-azul');
+			$("#metroaqui_novo").AddMetroSimpleButton('bt1', 'metro-verde', 'Style/Imagem/carta.png', 'Teste Roger', 'alert("feito b1");');
+            $("#metroaqui_novo").AddMetroSimpleButton('bt2', 'metro-laranja', 'Style/Imagem/carta.png', 'Laranja', 'alert("Laranja");');
+            $("#metroaqui_novo").AddMetroDoubleButton('bt4', 'metro-azul', 'Style/Imagem/carta.png', 'Azul', 'alert("Azul");');
+            $("#metroaqui_novo").AddMetroSimpleButton('bt5', 'metro-laranja', 'Style/Imagem/carta.png', 'Laranja', 'alert("Laranja");');
+			$("#metroaqui_novo").AddMetroSimpleButton('bt1', 'metro-verde', 'Style/Imagem/admin.png', 'Teste Roger', '');
+            $("#metroaqui_novo").AddMetroSimpleButton('bt2', 'metro-laranja', 'Style/Imagem/carta.png', 'Laranja', '');
+			$("#metroaqui_novo").AddMetroSimpleButton('bt1', 'metro-verde', 'Style/Imagem/carta.png', 'Teste Roger', '');
+        });
+    </script>
+</head>
+<body>
+    <div class="cabecalho">
+        <!--<img src="Style/Imagem/logo.png" alt="Interação Sistemas" height="150" />-->
+    </div>
+
+    <div id="metroaqui_novo" class="metro-panel">
+	</div>
+    <div id="metroaqui" class="metro-panel"></div>
+	
+	<div class="center" style="position:fixed; bottom:30px; left:0px; width:100%;text-decoration:none;"><a href="http://www.interacaosistemas.com.br">Developer: Roger Medeiros - http://www.interacaosistemas.com.br</a></div>
+</body>
+</html>

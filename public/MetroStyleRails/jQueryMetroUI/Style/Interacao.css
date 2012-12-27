@@ -1,0 +1,14 @@
+﻿body 
+{
+    margin:0px;
+	font-family:Verdana, Tahoma;
+}
+
+.clear { clear:both; }
+.center { text-align:center;}
+
+.cabecalho {
+    background:url('Imagem/fundologo.png') repeat-x #00A4CC;
+    padding-left:50px;
+}
+

@@ -39,22 +39,69 @@ ActiveAdmin.register Page do
   end
 
   sidebar :"格式中心" do
-    ul do
-      li "图片排版"
-        div %{居左： <img class="img_left" src="../..}
-        div %{居左： <img class="img_right" src="../..}
-      li "标题"
-        div image_tag(asset_path('HN.jpg'), :width => '220px')
-      li "连接文本"
-        div %{<a title="inruby.com" target="_blank" href=""> </a>}
-      li "嵌入代码"
-        div "<pre><code></code></pre>"
-        div "<pre><code class='ruby'> </code></pre>"
-        div "<pre><code class='no-highlight'> </code></pre>"
-      li "代码常用"
-        div "<>  &lt; &gt;"
-        div image_tag(asset_path('css_eg.png'), :width => '220px')
-    end
+      div %{排版类型:  text, image, icon}
+      div %{主题颜色：<table>
+        <tbody><tr>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background: red">red</td>
+          <td class="tcw">#ff0000</td>
+          <td class="bld" style="background: white">white</td>
+          <td class="tcw">#ffffff</td>
+        </tr>
+        <tr>
+          <td class="bld" style="background: cyan">cyan</td>
+          <td class="tcw">#00ffff</td>
+          <td class="bld" style="background: silver">silver</td>
+          <td class="tcw">#c0c0c0</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background: blue">blue</td>
+          <td class="tcw">#0000ff</td>
+          <td class="bld wt" style="background: grey">grey</td>
+          <td class="tcw">#808080</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background: darkblue">darkblue</td>
+          <td class="tcw">#0000a0</td>
+          <td class="bld wt" style="background: black">black</td>
+          <td class="tcw">#000000</td>
+        </tr>
+        <tr>
+          <td class="bld" style="background: lightblue">lightblue</td>
+          <td class="tcw">#add8e6</td>
+          <td class="bld wt" style="background: orange">orange</td>
+          <td class="tcw">#ffa500</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background: purple">purple</td>
+          <td class="tcw">#800080</td>
+          <td class="bld wt" style="background: brown">brown</td>
+          <td class="tcw">#a52a2a</td>
+        </tr>
+        <tr>
+          <td class="bld" style="background: yellow">yellow</td>
+          <td class="tcw">#ffff00</td>
+          <td class="bld wt" style="background: maroon">maroon</td>
+          <td class="tcw">#800000</td>
+        </tr>
+        <tr>
+          <td class="bld" style="background: lime">lime</td>
+          <td class="tcw">#00ff00</td>
+          <td class="bld wt" style="background: green">green</td>
+          <td class="tcw">#008000</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background: fuchsia">fuchsia</td>
+          <td class="tcw">#ff00ff</td>
+          <td class="bld wt" style="background: olive">olive</td>
+          <td class="tcw">#808000</td>
+        </tr>
+      </tbody></table>}.html_safe
   end
 
 end

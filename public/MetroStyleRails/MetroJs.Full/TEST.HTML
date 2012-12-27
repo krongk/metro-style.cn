@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+   <meta name="viewport" content="width=device-width">
+   <title>metro-style.cn</title>
+
+   <link rel="stylesheet" type="text/css" href="MetroJs.css">
+   <link rel="stylesheet" type="text/css" href="site.css">
+</head>
+
+<body class="dark projects-metrojs">
+  <div class="page">
+    <header id="header">
+        <h1><a href="/">MetroStyle风格网站设计</a></h1>
+    </header>
+
+    <section id="main">
+      
+      <div id="tiles" class="cyan">
+        <div class="live-tile two-wide">
+          <span class="tile-title">slide tile (figure 2a)</span>
+          <div class="red"><h2>333Hello world</h2></div>
+          <div class="yellow"><h1>Good yellow</h1></div>
+        </div>
+      </div>
+
+      <div id="tiles" class="purple">
+        <div class="live-tile two-wide">
+          <span class="tile-title">slide tile (figure 2a)</span>
+          <div class="red"><h2>333Hello world</h2></div>
+          <div class="yellow"><h1>Good yellow</h1></div>
+        </div>
+      </div>
+
+      <!-- Apply blue theme as default for all tiles -->
+      <div id="tiles" class="emerald">
+        <div class="live-tile">
+          <div class="red"><h2>333Hello world</h2></div>
+          <div class="yellow"><h1>Good yellow</h1></div>
+          <span class="tile-title">slide tile (figure 2a)</span>
+
+        </div>
+      </div>
+
+    
+       <div id="tiles" class="red">
+        <div class="live-tile action">
+          <div class="red"><h2>333Hello world</h2></div>
+          <div class="yellow"><h1>Good yellow</h1></div>
+          <span class="tile-title">slide tile (figure 2a)</span>
+
+        </div>
+      </div>
+
+
+      <div id="tiles" class="orange">
+        <div class="live-tile two-wide">
+          <span class="tile-title">slide tile (figure 2a)</span>
+          <span class="icon icon-publish"></span>
+          <div class="skill-HTML5">sdf
+           <img class="skill-HTML5" src="images/1pixel.gif" alt="twitter">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="appbar">
+      <nav>
+        <ul id="menu" class="appbar-buttons">
+          <li>
+            <a href="/" class="home"><img src="images/1pixel.gif" alt="home"></a>
+            <span class="charm-title">Home</span>
+          </li>
+          <li>
+            <a href="/about" class="about"><img src="images/1pixel.gif" alt="about"></a>
+            <span class="charm-title">About</span>
+          </li>
+          <li>
+            <a href="http://www.twitter.com/dgreenwell" onclick="javascript:trackExternal(this);" target="_blank" class="twitter"><img src="images/1pixel.gif" alt="twitter"></a>
+            <span class="charm-title">Twitter</span>
+          </li>
+        </ul>
+      </nav>
+      <a class="etc">•••</a>
+      <ul class="theme-options clear">                        
+        <li><a href="javascript:;" title="amber" class="accent amber"></a></li>
+      </ul>
+    </footer>
+  </div><!--end page -->
+<script src="http://www.drewgreenwell.com/scripts/jquery-1.5.1.min.js"></script>
+<script src="http://www.drewgreenwell.com/scripts/modernizr-1.7.min.js"></script>
+<script src="MetroJs.js"></script>
+<!-- Activate live tiles -->
+<script type="text/javascript">
+  // apply regular slide universally unless .exclude class is applied 
+  // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
+  $(".action").not(".exclude").liveTile();
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {             
+    var doBind = (typeof (window.bindAppBarKeyboard) == "undefined" || window.bindAppBarKeyboard);
+
+    //remove default theme and apply applicationBarTheme
+    $("body,.tiles").removeClass("dark").removeClass("blue");
+    $(".appbar").applicationBar({ preloadAltBaseTheme: true, 
+            metroLightUrl:'/images/metroIcons_light.jpg',
+            metroDarkUrl:'/images/metroIcons.jpg',
+            bindKeyboard: doBind });
+          var mJs = jQuery.fn.metrojs;
+          mJs.theme.appendAccentColors();
+          mJs.theme.appendBaseThemes();
+  });
+</script>
+
+</body>
+</html>

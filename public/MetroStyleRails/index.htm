@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://gridster.net/ -->
+<html class="no-js" lang="en">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>gridster.js</title>
+
+	<meta name="description" content="gridster.js, a drag-and-drop multi-column jQuery grid plugin">
+	<meta name="author" content="duscksboard">
+
+    <link rel="stylesheet" type="text/css" href="./stylesheets/jquery.gridster.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/metro_ui.css">
+	
+  
+ </head>
+
+<body class="page">
+
+<header>
+    	<h1>Metro Style 网站设计</h1>
+    </header>
+    
+<section class="demo">
+
+<div class="gridster">
+          <ul>
+            <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+                <div class="live-tile red">
+                  <span class="tile-title">1121</span>
+  		          <div class="link"><a href="#">内容on个不飞</a></div>
+                </div>
+            </li>
+            <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+            	<div class="live-tile olive">
+                  <span class="tile-title">1121</span>
+                  <div class="link"><a href="#">内容on个不飞,美丽的内容网被分析分，分路法律系统</a></div>
+                </div>
+            </li>
+
+            <li data-row="3" data-col="2" data-sizex="2" data-sizey="1" class="green">
+            	<div class="live-tile orange" style="background: url(images/metroIcons.jpg);">
+                  <span class="tile-title">3221</span>
+                  <div class="image">
+                      <a href="wefwefwf.com" >内容on个不飞,美丽的内容网被分析分，分路法律系统</a>                  </div>
+                </div>
+            </li>
+            <li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
+               <div class="live-tile orange" style="background: url(images/t_qq.jpg);">
+                  <span class="tile-title">1222</span>
+                  <div class="image">
+                      <a href="wefwefwf.com">内容on个不飞,美丽的内容网被分析分，分路法律系统</a>                  </div>
+                </div>
+            </li>
+
+            <li data-row="1" data-col="4" data-sizex="1" data-sizey="1" class="try">1411</li>
+            <li data-row="2" data-col="4" data-sizex="2" data-sizey="1">2421</li>
+            <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">3411</li>
+
+            <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+            	<div class="live-tile teal">
+                  <span class="tile-title">1511</span>
+                  <div class="icon">
+                      <img src="images/phone.png" width="64px" height="64px"/>
+                      <div><a href="contact.htm">联系我们</a></div>
+                  </div>
+                </div>
+            </li>
+            <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">3511</li>
+
+            <li data-row="1" data-col="6" data-sizex="1" data-sizey="1">1611</li>
+            <li data-row="2" data-col="6" data-sizex="1" data-sizey="2">
+            	<div class="live-tile emerald">
+                  <span class="tile-title">1222</span>
+                  <div class="icon">
+                      <span class="icon-home"><img src="images/mail.png" width="64px" height="64px"/></span>
+                      <div>内容on个不飞</div>
+                  </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+		
+    </section>
+<script src="./javascripts/jquery-1.7.2.min.js" type="text/javascript" ></script>
+<script src="./javascripts/jquery.gridster.js" type="text/javascript" charset="utf-8"></script>
+
+<footer class="appbar">
+  <nav>
+    <ul id="menu" class="appbar-buttons">
+      <li> <a href="/" class="home"><img src="images/1pixel.gif" alt="home"></a> <span class="charm-title">Home</span> </li>
+      <li> <a href="/about" class="about"><img src="images/1pixel.gif" alt="about"></a> <span class="charm-title">About</span> </li>
+      <li> <a href="http://www.twitter.com/dgreenwell" onClick="javascript:trackExternal(this);" target="_blank" class="twitter"><img src="images/1pixel.gif" alt="twitter"></a> <span class="charm-title">Twitter</span> </li>
+    </ul>
+  </nav>
+  <a class="etc">•••</a></footer>
+<script type="text/javascript">
+  var gridster;
+
+  $(function(){
+
+    gridster = $(".gridster > ul").gridster({
+        widget_margins: [5, 5],
+        widget_base_dimensions: [140, 140],
+        min_cols: 6
+    }).data('gridster');
+
+  });
+  //gridster.add_widget('<li class="new" data-row="2" data-col="7" data-sizex="1" data-sizey="2">The HTML of the widget...</li>', 2, 1);
+  //gridster.remove_widget( $('.gridster li').eq(3) );
+  //gridster.serialize();
+</script>
+
+</body></html>
