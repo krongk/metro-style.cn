@@ -10,8 +10,12 @@
   <meta name="keywords" content="<%= yield(:meta_keywords)%>" />
   <meta name="description" content="<%= yield(:meta_description)%>" />
 
-  <%= javascript_include_tag "application" %>
   <%= stylesheet_link_tag    "application" %>
+  <% if request[:controller] == 'admin' %>
+    <%= stylesheet_link_tag "active_admin", "active_admin_tinymce" %>
+  <% end %>
+
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript">
     var gridster;
@@ -41,6 +45,9 @@
     <%=yield %>
   </section>
 
-  <%=render :partial => "layouts/footer" %>  
+  <%=render :partial => "layouts/footer" %> 
+  
+   
 </body>
 </html>
+

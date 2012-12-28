@@ -9,7 +9,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails', '1.0.14'
+gem 'jquery-rails'
 gem 'devise', '1.5.0'
 
 #==other
@@ -40,7 +40,7 @@ gem "meta_search",    '>= 1.1.0.pre'
 #gem 'therubyracer'
 
 #===WYSIWYG Editor
-gem 'tinymce-rails', '3.4.7'
+gem 'tinymce-rails'
 
 #===IP Location
 gem 'geo_location'

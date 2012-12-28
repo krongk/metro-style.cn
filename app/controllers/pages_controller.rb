@@ -15,8 +15,12 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @page =   Page.find_by_id(params[:id]) 
-    @page ||= Page.last 
+    if params[:id] =~ /^\d+$/
+      @page =   Page.find_by_id(params[:id]) 
+    else
+      @page = Page.find_by_path_name(params[:id])
+    end
+    @page ||= Page.first 
 
     respond_to do |format|
       format.html # show.html.erb

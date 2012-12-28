@@ -1,6 +1,6 @@
 <% case page.layout_type %>
 <% when 'image' %>
-  <div class="live-tile <%=page.theme %>" style="background: url(<%= page.image_url %>);">
+  <div class="live-tile <%=page.theme %>" style="background: url(<%= page.image_path %>);">
     <span class="tile-title"><%= page.tile_title %></span>
     <div class="image"> <%=link_to page.title, page_path(page) %></div>
   </div>
@@ -8,7 +8,7 @@
   <div class="live-tile <%=page.theme %>">
     <span class="tile-title"><%= page.tile_title %></span>
     <div class="icon">
-        <span><%=image_tag page.image_url %></span>
+        <span><%=image_tag page.image_path %></span>
         <div><%=link_to page.title, page_path(page) %></div>
     </div>
   </div>

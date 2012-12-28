@@ -1,11 +1,7 @@
-<% title [@project_item.title, "成都红宝石企业建站"].join('-') %>
-<% meta_keywords [@project_item.title,"建站成功案例，案例展示，成都红宝石企业建站，红宝石网络，成都红宝石信息技术"].join('-') %>
-<% meta_description [@project_item.title,"成都红宝石信息技术网，开发团队具有多年互联网从业经验，团队为企业提供策划、开发、推广、运维一站式服务！"].join('-') %>
+<% title ["Metro Style 网站设计"].join(' - ') %>
+<% meta_keywords ["Metro Style 网站设计", "网站建设，网站推广，公关软文，电子商务，企业信息化，Ruby on Rails"].join(' - ') %>
+<% meta_description ["Metro Style 网站设计，团队为企业提供企业策划、网站建设、网络推广、公关软文、电子商务等一站式服务！"].join(' - ') %>
 
-<% content_for :aside do %>
-  <br/>
-  <%= project_tags %>
-<% end %>
 
 <div class="news_main">
   <div style="margin:4px;">首页 > <a href="/project_cates">项目资源库</a> > <%=link_to @project_item.project_cate.name, project_cate_path(@project_item.project_cate_id)%></div>

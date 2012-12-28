@@ -1,14 +1,30 @@
-== Rails on Web 
-  Rails on Web is rails integration for build a company site.
-  Use Rails on Web, you just need a blueprint.
+# What is Metro-style.cn?
 
-=== How To:
-  1. download srouce
-  2. bundle install
-  3. modify config/site_map.yml
-  4. rake 
-    db:migrate
-    rails_on_web:init_all_data
-    rails_on_web:generate_all_page
-  5. rails server
-   
+metro-style.cn is a website which integrated with Metro Style UI and jquery plugin gridster.js
+The purpose is to help user who want to quick start DIY a METRO STYLE site.
+
+
+## Features
+
+* Add new grid page on background admin, Auto layout on front page.
+* Can drag each grid.
+* Can custom grid layout.
+* Can custom grid theme(text link, icon or image flatten).
+* Many tile style to choose(red, blue, green or any other).
+* Background admin integrated with ActiveAdmin and TinyMCE.
+* Form integrated with jquery validator.
+* Suit for Chrome, Opera, Firefox and IE 9 plus.
+
+# How to use
+
+```ruby
+ git clone git@github.com:krongk/mestro-style.cn
+ cd mestro-style.cn
+ bundle install
+ rails s
+```
+
+# Extensions
+
+https://github.com/ducksboard/gridster.js
+http://www.drewgreenwell.com/projects/metrojs

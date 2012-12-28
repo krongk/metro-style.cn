@@ -16,6 +16,7 @@ header{
     padding: 1em;
 	background: #fff;
     display: block;
+    line-heigt: 30;
 }
 
 .content {
@@ -65,3 +66,9 @@ header{
     background: rgba(255,255,255,.2)!important;
 }
 
+/***
+ Form style
+*/
+form div.field{
+    margin: 10px 0;
+}
