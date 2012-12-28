@@ -13,6 +13,7 @@ The purpose is to help user who want to quick start DIY a METRO STYLE site.
 * Many tile style to choose(red, blue, green or any other).
 * Background admin integrated with ActiveAdmin and TinyMCE.
 * Form integrated with jquery validator.
+* Animate jquery.cycle.js
 * Suit for Chrome, Opera, Firefox and IE 9 plus.
 
 # How to use
@@ -28,3 +29,4 @@ The purpose is to help user who want to quick start DIY a METRO STYLE site.
 
 https://github.com/ducksboard/gridster.js
 http://www.drewgreenwell.com/projects/metrojs
+http://jquery.malsup.com/cycle/

@@ -31,6 +31,15 @@
     //gridster.add_widget('<li class="new" data-row="2" data-col="7" data-sizex="1" data-sizey="2">The HTML of the widget...</li>', 2, 1);
     //gridster.remove_widget( $('.gridster li').eq(3) );
     //gridster.serialize();
+
+    $('.cycle').cycle({
+      fx: 'scrollDown', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+      sync: true,
+      speed: 500,
+      timeout: 8000,
+      delay: -1000 
+    });
+
   </script>
   <!--[if lt IE 7]>
     <link href="/assets/ie_style.css" rel="stylesheet" type="text/css" />

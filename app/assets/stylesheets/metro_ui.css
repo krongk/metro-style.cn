@@ -134,6 +134,9 @@ Layout tile
 .green { background-color:rgb(51,153,51); }
 .green { border-color:rgb(51,153,51); }
 
+.lightgreen { background-color: #009933; }
+.lightgreen { border-color: #009933; }
+
 .indigo { background-color:rgb(106,0,255); }
 .indigo { border-color:rgb(106,0,255); }
 
@@ -164,6 +167,9 @@ Layout tile
 .red  { background-color:rgb(229,20,0); }
 .red  { border-color:rgb(229,20,0); }
 
+.lightred { background-color: #cc0000; }
+.lightred { border-color: #cc0000; }
+
 .sienna  { background-color:rgb(123,58,62); }
 .sienna  { border-color:rgb(123,58,62); }
 
@@ -176,6 +182,23 @@ Layout tile
 .yellow { background-color:rgb(216,193,1); }
 .yellow { border-color:rgb(216,193,1); }
 
+.fuchsia { background-color: #ff00ff; }
+.fuchsia { border-color: #ff00ff; }
+
+.silver { background-color: #c0c0c0; }
+.silver { border-color: #c0c0c0; }
+
+.grey { background-color: #808080; }
+.grey { border-color: #808080; }
+
+.maroon { background-color: #800000; }
+.maroon { border-color: #800000; }
+
+.darkblue { background-color: #0000a0; }
+.darkblue { border-color: #0000a0; }
+
+.lightblue { background-color: #add8e6; }
+.lightblue { border-color: #add8e6; }
 
 /* application-bar styles */
 .appbar 

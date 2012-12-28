@@ -96,10 +96,52 @@ ActiveAdmin.register Page do
           <td class="tcw">#008000</td>
         </tr>
         <tr>
+          <td class="bld wt" style="background-color: #009933;">lightgreen</td>
+          <td class="tcw">#009933</td>
+          <td class="bld wt" style="background-color: #cc0000;">lightred</td>
+          <td class="tcw">#cc0000</td>
+        </tr>
+        <tr>
           <td class="bld wt" style="background: fuchsia">fuchsia</td>
           <td class="tcw">#ff00ff</td>
           <td class="bld wt" style="background: olive">olive</td>
           <td class="tcw">#808000</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background-color:rgb(0,171,169);">teal</td>
+          <td class="tcw">0,171,169</td>
+          <td class="bld wt" style="background-color:rgb(101,118,136);">steel</td>
+          <td class="tcw">101,118,136</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background-color:rgb(0, 80, 239);">cobalt</td>
+          <td class="tcw">0,171,169</td>
+          <td class="bld wt" style="background-color:rgb(162, 0, 37);">crimson</td>
+          <td class="tcw">101,118,136</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background-color:rgb(0, 138, 0);">emerald</td>
+          <td class="tcw">0,171,169</td>
+          <td class="bld wt" style="background-color:rgb(106,0,255);">indigo</td>
+          <td class="tcw">101,118,136</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background-color:rgb(162,193,57);">lime</td>
+          <td class="tcw">0,171,169</td>
+          <td class="bld wt" style="background-color:rgb(216,0,115);">magenta</td>
+          <td class="tcw">101,118,136</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background-color:rgb(240,150,9);">mango</td>
+          <td class="tcw">0,171,169</td>
+          <td class="bld wt" style="background-color:rgb(118,95,137);">mauve</td>
+          <td class="tcw">101,118,136</td>
+        </tr>
+        <tr>
+          <td class="bld wt" style="background-color:rgb(123,58,62);">sienna</td>
+          <td class="tcw">0,171,169</td>
+          <td class="bld wt" style="background-color:rgb(230,113,184);">pink</td>
+          <td class="tcw">101,118,136</td>
         </tr>
       </tbody></table>}.html_safe
   end

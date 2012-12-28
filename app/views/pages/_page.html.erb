@@ -4,11 +4,30 @@
     <span class="tile-title"><%= page.tile_title %></span>
     <div class="image"> <%=link_to page.title, page_path(page) %></div>
   </div>
+<% when 'image cycle' %>
+  <span class="cycle">
+    <% page.image_path.split(/\s*\|\s*/).each do |img_path| %>
+      <div class="live-tile <%=page.theme %>" style="background: url(<%= img_path %>);">
+        <span class="tile-title"><%= page.tile_title %></span>
+        <div class="image"> <%=link_to page.title, page_path(page) %></div>
+      </div>
+    <% end %>
+  </span>
 <% when 'icon' %>
   <div class="live-tile <%=page.theme %>">
-    <span class="tile-title"><%= page.tile_title %></span>
     <div class="icon">
-        <span><%=image_tag page.image_path %></span>
+        <span><%=image_tag page.image_path, :width => "64px" %></span>
+        <div><%=link_to page.title, page_path(page) %></div>
+    </div>
+  </div>
+<% when 'icon cycle' %>
+  <div class="live-tile <%=page.theme %> cycle">
+    <div class="icon">
+        <span><%=image_tag page.image_path, :width => "64px" %></span>
+        <div><%=link_to page.title, page_path(page) %></div>
+    </div>
+    <div class="icon">
+        <span><%=image_tag page.image_path, :width => "64px" %></span>
         <div><%=link_to page.title, page_path(page) %></div>
     </div>
   </div>

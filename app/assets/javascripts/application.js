@@ -10,5 +10,5 @@
 //= require jquery_ujs
 
 //= require 'jquery.gridster'
-//= require 'jquery.sliders'
+//= require 'jquery.cycle.all'
 //= require 'jquery.validate'
