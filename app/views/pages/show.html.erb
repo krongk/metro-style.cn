@@ -10,10 +10,9 @@
 
     <li data-row="1" data-col="2" data-sizex="<%= 6 - @page.data_sizex %>" data-sizey="<%= 4 - @page.data_sizey %>">
       <div class="live-tile white">
-        <article class="article">
+        <article class="article" style="margin-bottom: 100px;">
           <%= @page.body.html_safe %>
-          <br/>
-          <%= render :partial => 'layouts/bshare' %>
+          <br/> <br/> <br/>
         </article>
       </div>
     </li>
@@ -21,6 +20,7 @@
   </ul>
 </div>
 
+<%= render :partial => 'layouts/bshare' %>
 
 
 

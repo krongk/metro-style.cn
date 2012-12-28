@@ -47,7 +47,7 @@
 </head> 
 
 
-<body class="page">
+<body class="page" style="background: url(<%= Rails.cache.read(:wallpaper)%>)">
   <%=render :partial => "layouts/header" %>
 
   <section class="content">
@@ -56,7 +56,6 @@
 
   <%=render :partial => "layouts/footer" %> 
   
-   
 </body>
 </html>
 
