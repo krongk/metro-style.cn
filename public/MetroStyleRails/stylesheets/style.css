@@ -1,7 +1,4 @@
-
-
-
-/* Gridster styles */
+/* page styles */
 .page{
 	background: #004756;
 }
@@ -19,16 +16,11 @@ header{
     padding: 1em;
 	background: #fff;
 }
-
-.demo {
-    margin: 0;
-    padding: 1em 0 5.5em;
+.article a:link{
+    color: blue;
 }
 
-.demo:hover .gridster {
-    opacity: 1;
-}
-
+/* Gridster styles */
 .gridster {
     width: 940px;
     margin: 0 auto;

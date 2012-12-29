@@ -14,9 +14,10 @@ ActiveAdmin.register Page do
     column :title do |item|
       link_to item.title, admin_page_path(item)
     end
-    column :body do |item|
-      strip_tags(item.body).truncate(80) unless item.body.blank?
-    end
+    column :data_row 
+    column :data_col
+    column :data_sizex 
+    column :data_sizey
     # column :updated_at do |item|
     #   item.updated_at.strftime("%Y-%m-%d")
     # end
@@ -39,7 +40,9 @@ ActiveAdmin.register Page do
   end
 
   sidebar :"格式中心" do
-      div %{排版类型:  text, image, icon}
+      div %{排版类型:  text, image, icon, text cycle, icon cycle}
+      div %{如果采用: image cycle, 需要指定两张图片则: a.jpg|b.jpg}
+      hr
       div %{主题颜色：<table>
         <tbody><tr>
           <th>Name</th>

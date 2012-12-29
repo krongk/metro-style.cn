@@ -25,10 +25,9 @@ body {
     background-color: #EEEEEE;
     font-family: 'Segoe UI Light', 'Microsoft JhengHei', 微软正黑体;
     -webkit-font-smoothing: antialiased;
-    font-size: x-small;
     color: #666666;
-	font-size: 110%;
-	font-weight: 0;	
+	  font-size: 110%;
+	  font-weight: 0;	
 }
 
 h1, h2, h3, h4{

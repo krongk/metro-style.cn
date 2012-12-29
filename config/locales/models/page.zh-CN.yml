@@ -17,7 +17,7 @@ zh-CN:
         deletable: 可否删除
         id: 编号
         theme: 主题(red, blue, green ...)
-        layout_type: 布局(text, image, iconz | cycle)
+        layout_type: 布局(text, image, icon | cycle)
         tile_title: 瓦角标题
         image_path: 图片路径
         created_at: 添加时间
