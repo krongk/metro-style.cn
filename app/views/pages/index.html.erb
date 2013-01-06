@@ -1,14 +1,16 @@
-<h1>文章列表</h1>
+<% title "MetroStyle网站设计" %>
+<% meta_keywords "Metro Style 网站设计"%>
+<% meta_description "Metro Style 网站设计" %>
 
-<table>
 
-<% @pages.each do |page| %>
-  <tr>
-    <td><%= link_to page.title, page %></td>
-  </tr>
-<% end %>
-</table>
+<div class="gridster">
+  <ul>
+    <% @pages.each do |page| %>
+      <li data-row="<%=page.data_row %>" data-col="<%=page.data_col %>" data-sizex="<%=page.data_sizex %>" data-sizey="<%=page.data_sizey %>">
 
-<br />
+        <%= render :partial => 'pages/page', :locals => {:page => page} %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-<div class="tags"><%= will_paginate @pages %></div>
