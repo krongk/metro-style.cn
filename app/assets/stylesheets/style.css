@@ -1,5 +1,4 @@
-/* Gridster styles */
-.page{
+﻿.page{
 	background: #004756;
 }
 header{
@@ -15,16 +14,13 @@ header{
     display: block;
     line-heigt: 30;
 }
-
 .content {
     margin: 0 0 40px 0;
     padding: 1em 0 5.5em;
 }
-
 .content:hover .gridster {
     opacity: 1;
 }
-
 .gridster {
     width: 940px;
     margin: 0 auto;
@@ -56,9 +52,6 @@ header{
     background: rgba(255,255,255,.2)!important;
 }
 
-/***
- Form style
-*/
 form div.field{
     margin: 10px 0;
 }
