@@ -11,6 +11,16 @@
         <%= render :partial => 'pages/page', :locals => {:page => page} %>
       </li>
     <% end %>
+
+    <% if @pages.size > 16 %>
+      <li data-row="1" data-col="6" data-sizex="1" data-sizey="2">
+        <div class="live-tile blue">
+          <span class="tile-title">翻页</span>
+          <div  class="link"><%= will_paginate @pages%></div>
+        </div>
+      </li>
+    <% end %>
+    
   </ul>
 </div>
 

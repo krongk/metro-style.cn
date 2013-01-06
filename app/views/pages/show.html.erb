@@ -4,17 +4,18 @@
 
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="<%=@page.data_sizex %>" data-sizey="<%=@page.data_sizey %>">
-      <%= render :partial => 'pages/page', :locals => {:page => @page} %>
-    </li>
 
-    <li data-row="1" data-col="2" data-sizex="<%= 6 - @page.data_sizex %>" data-sizey="<%= 4 - @page.data_sizey %>">
+    <li data-row="1" data-col="1" data-sizex="<%= 6 - @page.data_sizex %>" data-sizey="<%= 4 - @page.data_sizey %>">
       <div class="live-tile white">
         <article class="article" style="margin-bottom: 100px;">
           <%= @page.body.html_safe %>
           <br/> <br/> <br/>
         </article>
       </div>
+    </li>
+
+     <li data-row="1" data-col="2" data-sizex="<%=@page.data_sizex %>" data-sizey="<%=@page.data_sizey %>">
+      <%= render :partial => 'pages/page', :locals => {:page => @page} %>
     </li>
 
   </ul>

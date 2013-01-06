@@ -111,6 +111,9 @@ Layout tile
 .amber  { background-color:rgb(241, 163, 11); }
 .amber  {  color:rgb(241, 163, 11); }
 
+.black { color: #fff; background-color: #000; }
+.black {  border-color: #000; }
+
 .blue { color: #fff; background-color:rgb(27,161,226); }
 .blue {  border-color:rgb(27,161,226); }
 
@@ -131,6 +134,9 @@ Layout tile
 
 .green { background-color:rgb(51,153,51); }
 .green { border-color:rgb(51,153,51); }
+
+.grey { color: #fff; background-color: #808080; }
+.grey {  border-color: #808080; }
 
 .lightgreen { background-color: #009933; }
 .lightgreen { border-color: #009933; }

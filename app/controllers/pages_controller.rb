@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.paginate(:page => params[:page] || 1)
+    @pages = Page.all.sort{|a, b| [a.data_row, a.data_col] <=> [b.data_row, b.data_col] }.paginate(:per_page => 16, :page => params[:page] || 1)
 
     respond_to do |format|
       format.html # index.html.erb
