@@ -24,7 +24,7 @@ class PagesController < ApplicationController
 
     case @page.path_name
     when 'metro_icons'
-      redirect_to "/metro_icons"
+      return redirect_to "/metro_icons"
     end
 
     respond_to do |format|
