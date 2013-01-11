@@ -75,4 +75,5 @@ ul.metro_icons{
 .metro_icons li{
     float: left;
     margin: 5px;
+    background: grey;
 }
