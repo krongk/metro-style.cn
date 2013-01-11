@@ -1,0 +1,22 @@
+<% title "最全最实用的MetroStyle图标" %>
+<% meta_keywords "最全最实用的Metro icons 图标 网站设计"%>
+<% meta_description "Metro Style 图标 标志 ico icon" %>
+
+<div class="gridster">
+	<ul>
+	<% @icon_dictionary.each_pair do |k, v| %>
+	  <% sizey = (v.size/36 + 1) %>
+	  <% sizey = sizey > 1 ? sizey : 2 %>
+	  <li data-row="1" data-col="1" data-sizex="6" data-sizey="<%= sizey > 4 ? (sizey -1) : sizey %>">
+	    <h1 style="margin: 0 0 -20px 25px;"><%=k %></h1>
+	    <ul class="metro_icons">
+	      <% v.each do |path| %>
+	        <li><%=link_to image_tag(path, :width => 40), path %></li>
+	      <% end %>
+	    </ul>
+	  </li>
+	<% end %>
+	</ul>
+</div>
+
+<%= render :partial => 'layouts/bshare' %>

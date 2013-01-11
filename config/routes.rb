@@ -33,7 +33,7 @@ RailsOnWeb::Application.routes.draw do
 
   get "home/index"
   match "about" => "pages#show", :id => 'about'
-  match "sitemap" => "home#sitemap"
+  match "metro_icons" => "home#metro_icons"
   match "contact" => "contacts#new"
   
   match "form" => "home#form"

@@ -67,3 +67,12 @@ form div.field{
     height: 0px;
     display: none;
 }
+
+/**************metro icon list **********/
+ul.metro_icons{
+ margin: 20px;
+}
+.metro_icons li{
+    float: left;
+    margin: 5px;
+}

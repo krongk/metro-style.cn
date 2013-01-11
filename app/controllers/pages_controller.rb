@@ -22,6 +22,11 @@ class PagesController < ApplicationController
     end
     @page ||= Page.first 
 
+    case @page.path_name
+    when 'metro_icons'
+      redirect_to "/metro_icons"
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @page }
