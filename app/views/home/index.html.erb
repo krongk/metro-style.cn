@@ -2,21 +2,6 @@
 <% meta_keywords "Metro Style 网站设计"%>
 <% meta_description "Metro Style 网站设计" %>
 
-<ul>
-<% @icon_dictionary.each_pair do |k, v| %>
-  <li>
-    <h1><%=k %></h1>
-    <ul>
-      <% v.each do |path| %>
-      <li><%= path %></li>
-        <li><%= image_tag(path.sub(/^.*\/public\//, '/'), :width => 40) %></li>
-      <% end %>
-    </ul>
-  </li>
-<% end %>
-</ul>
-<hr/>
-
 <div class="gridster">
   <ul>
     <% @pages.each do |page| %>
